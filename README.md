@@ -6,7 +6,7 @@ Desenvolver um cadastro de clientes por meio de EJB, JPA e JSF na linguagem java
 
 ## O que fazer?
 A raiz deste repositório é um workspace do eclipse IDE. Para rodar o projeto, deve-se usar as seguintes tecnologias:
-- Eclipse 2019.3
+- Eclipse 2019-03 (4.11.0)
 - JDK 8 (java se 1.8 & jre 1.8)
 - JBoss Tools
 - Wildfly 9.0.1.final (wildfly 9.x) server
