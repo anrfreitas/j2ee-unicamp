@@ -1,0 +1,8 @@
+package com.project.managers;
+
+import javax.enterprise.context.RequestScoped;
+
+@RequestScoped
+public class ClienteManager {
+
+}

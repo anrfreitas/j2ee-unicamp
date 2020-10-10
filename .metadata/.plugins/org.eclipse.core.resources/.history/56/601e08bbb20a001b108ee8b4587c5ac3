@@ -1,0 +1,8 @@
+package com.project.resources;
+
+import javax.enterprise.context.ApplicationScoped;
+
+@ApplicationScoped
+public class EntityFactory {
+
+}

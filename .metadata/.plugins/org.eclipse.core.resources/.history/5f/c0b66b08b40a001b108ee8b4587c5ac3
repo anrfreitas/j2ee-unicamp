@@ -1,0 +1,15 @@
+package com.project.controllers;
+
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import com.project.managers.ClienteManager;
+
+@Named
+@SessionScoped
+public class ClienteController {
+
+	@Inject
+	private ClienteManager manager;
+}

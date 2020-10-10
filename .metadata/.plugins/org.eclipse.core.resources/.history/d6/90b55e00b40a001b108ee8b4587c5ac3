@@ -1,0 +1,13 @@
+package com.project.controllers;
+
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import com.project.managers.ClienteManager;
+
+@Named
+public class ClienteController {
+
+	@Inject
+	private ClienteManager manager;
+}

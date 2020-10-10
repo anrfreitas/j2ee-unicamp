@@ -1,0 +1,17 @@
+package com.project.rest;
+
+import javax.ejb.Stateless;
+import javax.inject.Inject;
+import javax.ws.rs.Path;
+
+import com.project.managers.ClienteManager;
+
+@Path("/cliente")
+@Stateless
+public class ClienteRest {
+
+	@Inject 
+	ClienteManager manager;
+	
+	/* How to create Rest Functions to the EJB Project we'll do in another video! */
+}

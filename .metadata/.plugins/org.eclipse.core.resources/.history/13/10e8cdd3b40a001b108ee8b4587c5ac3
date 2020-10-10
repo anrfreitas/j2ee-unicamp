@@ -1,0 +1,12 @@
+package com.project.managers;
+
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+
+@RequestScoped
+public class ClienteManager {
+
+	@Inject
+	private EntityManager em;
+}

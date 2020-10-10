@@ -1,0 +1,28 @@
+package com.project.managers;
+
+import java.util.List;
+
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+
+import com.project.entities.Cliente;
+
+@RequestScoped
+public class ClienteManager {
+
+	@Inject
+	private EntityManager em;
+	
+	public Cliente get(long id) {
+		return null;
+	}
+	
+	public List<Cliente> get() {
+		return null;
+	}
+	
+	public void save(Cliente entity) {
+		em.persist(entity);
+	}
+}

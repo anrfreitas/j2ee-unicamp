@@ -1,0 +1,6 @@
+package com.project.managers;
+
+@RequestScoped
+public class ClienteManager {
+
+}

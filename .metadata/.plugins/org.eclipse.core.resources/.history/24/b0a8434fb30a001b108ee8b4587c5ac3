@@ -1,0 +1,10 @@
+package com.project.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity(name="Cliente")
+@Table(name="Cliente")
+public class Cliente {
+
+}

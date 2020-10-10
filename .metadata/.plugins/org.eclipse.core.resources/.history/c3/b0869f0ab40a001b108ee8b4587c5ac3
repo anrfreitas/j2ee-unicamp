@@ -1,0 +1,17 @@
+package com.project.controllers;
+
+import java.io.Serializable;
+
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import com.project.managers.ClienteManager;
+
+@Named
+@SessionScoped
+public class ClienteController implements Serializable{
+
+	@Inject
+	private ClienteManager manager;
+}
