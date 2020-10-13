@@ -1,0 +1,53 @@
+package com.project.rest;
+
+import java.util.List;
+
+import javax.ejb.Stateless;
+import javax.inject.Inject;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+
+import com.project.entities.Cliente;
+import com.project.managers.ClienteManager;
+
+@Path("/cliente")
+@Stateless
+public class ClienteRest {
+
+	@Inject 
+	ClienteManager manager;
+	
+	/* How to create Rest Functions to the EJB Project we'll do in another video! */
+	
+	@GET
+	@Path("/teste")
+	@Produces("application/json")
+	public String teste() {
+		return "teste";
+	}
+	
+	@GET
+	@Path("/obter/{id}")
+	@Produces("application/json")
+	public Cliente getCliente(@PathParam("id") long id) {
+		return manager.get(id);
+	}
+	
+	@GET
+	@Path("/todos")
+	@Produces("application/json")
+	public List<Cliente> getClientes() {
+		return manager.get();
+	}
+	
+	@POST
+	@Path("/salvar")
+	@Consumes("application/json")
+	public String saveCliente(Cliente cliente){
+		return manager.save(cliente);
+	}
+}

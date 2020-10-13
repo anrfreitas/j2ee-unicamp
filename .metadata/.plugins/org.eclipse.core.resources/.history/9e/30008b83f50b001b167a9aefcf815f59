@@ -1,0 +1,24 @@
+package com.project.controllers;
+
+import java.io.Serializable;
+
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import com.project.managers.ClienteManager;
+
+@Named
+@SessionScoped
+public class ClienteController implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	@Inject
+	private ClienteManager manager;
+	
+	/* All the functions listed here will be passed through CDI to the Web Project JavaEnterpriseWeb!! We'll do it in another video... */
+}

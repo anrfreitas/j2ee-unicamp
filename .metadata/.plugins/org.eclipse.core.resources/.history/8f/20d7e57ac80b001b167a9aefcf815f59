@@ -1,0 +1,29 @@
+package com.project.rest;
+
+
+import javax.ejb.Stateless;
+import javax.inject.Inject;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+
+import com.project.managers.ClienteManager;
+
+@Path("/cliente")
+@Stateless
+public class ClienteRest {
+
+	@Inject 
+	ClienteManager manager;
+	
+	/* How to create Rest Functions to the EJB Project we'll do in another video! */
+	
+	/* It works perfectly, but we should before add JaxRS Facet to the JavaEnterpriseWeb project */
+	
+	@GET
+	@Path("/teste")
+	@Produces("application/json")
+	public String teste() {
+		return "teste";
+	}
+}

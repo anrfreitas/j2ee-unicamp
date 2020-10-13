@@ -1,0 +1,44 @@
+package com.project.managers;
+
+import java.util.List;
+
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+
+import com.project.entities.Cliente;
+
+@RequestScoped
+public class ClienteManager {
+
+	@Inject
+	private EntityManager em;
+	
+	public Cliente get(long id) {
+		return em.find(Cliente.class, id);
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Cliente> get() {
+		return em.createQuery("SELECT c FROM Cliente c").getResultList();
+	}
+	
+	public void save(Cliente entity) {
+		em.persist(entity);
+	}
+	
+	public void update(Cliente entity) {
+		if(entity.getId() != 0)
+			em.merge(entity);
+		else
+			em.persist(entity);
+	}
+	
+	public void remove(Cliente entity) {
+		em.remove(entity);
+	}
+	
+	public void removeById(long id) {
+		em.remove(get(id));
+	}
+}

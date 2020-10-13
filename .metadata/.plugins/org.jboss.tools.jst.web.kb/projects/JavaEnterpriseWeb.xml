@@ -118,24 +118,90 @@
   <path value="/home/anonymous/wildfly-9.0.1.Final/modules/system/layers/base/org/picketbox/main/picketbox-4.9.2.Final.jar"/>
  </paths>
  <validation>
+  <core validator-id="jsf-verification"/>
   <core validator-id="jboss.cdi.core">
    <linked-resource name="%1;%2;" path="%0"/>
    <linked-resource name="%0;" path="%3"/>
-   <linked-resource declaration="true" name="%4;" path="%1"/>
+   <linked-resource declaration="true" name="%4;%5;" path="%1"/>
+   <linked-resource declaration="true" name="%7;" path="%6"/>
   </core>
-  <el/>
+  <core validator-id="batch-verification"/>
+  <core validator-id="jboss.jsf.core"/>
+  <el>
+   <linked-el length="40" name="%4" offset="1993" path="%8"/>
+   <linked-el length="46" name="%5" offset="1583" path="%9"/>
+   <linked-el length="40" name="%5" offset="2783" path="%9"/>
+   <linked-el length="32" name="%5" offset="629" path="%9"/>
+   <linked-el length="39" name="%5" offset="1060" path="%8"/>
+   <linked-el length="40" name="%5" offset="1993" path="%8"/>
+   <linked-el length="43" name="%5" offset="1369" path="%8"/>
+   <linked-el length="40" name="%5" offset="1673" path="%8"/>
+   <linked-el length="40" name="%5" offset="2458" path="%9"/>
+   <linked-el length="42" name="%5" offset="2030" path="%9"/>
+   <linked-el length="37" name="%5" offset="750" path="%8"/>
+   <linked-el length="44" name="%7" offset="2367" path="%9"/>
+   <linked-el length="44" name="%7" offset="1939" path="%9"/>
+   <linked-el length="44" name="%7" offset="1492" path="%9"/>
+   <linked-el length="44" name="%7" offset="2692" path="%9"/>
+   <linked-el length="44" name="%6" offset="2367" path="%9"/>
+   <linked-el length="44" name="%6" offset="1939" path="%9"/>
+   <linked-el length="44" name="%6" offset="1492" path="%9"/>
+   <linked-el length="44" name="%6" offset="2692" path="%9"/>
+   <linked-el length="46" name="%1" offset="1583" path="%9"/>
+   <linked-el length="40" name="%1" offset="2783" path="%9"/>
+   <linked-el length="32" name="%1" offset="629" path="%9"/>
+   <linked-el length="39" name="%1" offset="1060" path="%8"/>
+   <linked-el length="40" name="%1" offset="1993" path="%8"/>
+   <linked-el length="43" name="%1" offset="1369" path="%8"/>
+   <linked-el length="40" name="%1" offset="1673" path="%8"/>
+   <linked-el length="40" name="%1" offset="2458" path="%9"/>
+   <linked-el length="42" name="%1" offset="2030" path="%9"/>
+   <linked-el length="37" name="%1" offset="750" path="%8"/>
+   <linked-el length="16" name="%10" offset="851" path="%9"/>
+   <linked-el length="18" name="%10" offset="1027" path="%9"/>
+   <linked-el length="22" name="%10" offset="1193" path="%9"/>
+   <linked-el length="16" name="%11" offset="851" path="%9"/>
+   <linked-el length="22" name="%12" offset="1193" path="%9"/>
+   <linked-el length="39" name="%13" offset="1060" path="%8"/>
+   <linked-el length="43" name="%13" offset="1369" path="%8"/>
+   <linked-el length="40" name="%13" offset="1673" path="%8"/>
+   <linked-el length="42" name="%13" offset="2030" path="%9"/>
+   <linked-el length="37" name="%13" offset="750" path="%8"/>
+   <linked-el length="18" name="%14" offset="1027" path="%9"/>
+   <linked-el length="11" name="%15" offset="612" path="%9"/>
+  </el>
  </validation>
  <aliases>
-  <alias
-   path="/JavaEnterpriseEJB/ejbModule/com/project/controllers/ClienteController.java" value="%1"/>
+  <alias path="/JavaEnterpriseWeb/WebContent/clienteList.xhtml" value="%9"/>
+  <alias path="newCliente" value="%4"/>
   <alias
    path="/JavaEnterpriseEJB/ejbModule/com/project/resources/EntityFactory.java" value="%3"/>
-  <alias path="clienteController" value="%4"/>
+  <alias path="clienteController" value="%5"/>
+  <alias path="systemController" value="%7"/>
+  <alias
+   path="/JavaEnterpriseEJB/ejbModule/com/project/controllers/SystemController.java" value="%6"/>
+  <alias
+   path="/JavaEnterpriseEJB/ejbModule/com/project/controllers/ClienteController.java" value="%1"/>
+  <alias path="/JavaEnterpriseWeb/WebContent/clienteEdit.xhtml" value="%8"/>
+  <alias path="cliente" value="%10"/>
+  <alias path="cliente.id" value="%11"/>
+  <alias path="cliente.telefone" value="%12"/>
+  <alias
+   path="/JavaEnterpriseEJB/ejbModule/com/project/entities/Cliente.java" value="%13"/>
+  <alias path="cliente.nome" value="%14"/>
   <alias
    path="/JavaEnterpriseEJB/ejbModule/com/project/managers/ClienteManager.java" value="%0"/>
   <alias
    path="/JavaEnterpriseEJB/ejbModule/com/project/rest/ClienteRest.java" value="%2"/>
+  <alias path="table" value="%15"/>
  </aliases>
  <includes/>
- <uris/>
+ <uris>
+  <uri value="http://xmlns.jcp.org/jsf/core">
+   <prefix>f</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsf/html">
+   <prefix>h</prefix>
+  </uri>
+ </uris>
 </kb-project>

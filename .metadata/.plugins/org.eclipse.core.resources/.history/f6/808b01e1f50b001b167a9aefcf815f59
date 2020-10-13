@@ -1,0 +1,48 @@
+package com.project.controllers;
+
+import java.io.Serializable;
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+import javax.enterprise.context.SessionScoped;
+import javax.enterprise.inject.Produces;
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import com.project.entities.Cliente;
+import com.project.managers.ClienteManager;
+
+@Named
+@SessionScoped
+public class ClienteController implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	@Inject
+	private ClienteManager manager;
+	
+	/* All the functions listed here will be passed through CDI to the Web Project JavaEnterpriseWeb!! We'll do it in another video... */
+	
+	@Produces
+	@Named
+	private Cliente newCliente; /* It's our session variable, since its a Session Scoped class! */
+	
+	@PostConstruct
+	public void initNewCliente() {
+		newCliente = new Cliente();
+	}
+	
+	public List<Cliente> getClientes() throws Exception {
+		try {
+			return manager.get();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+}

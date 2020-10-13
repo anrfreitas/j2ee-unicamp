@@ -2,13 +2,13 @@ package com.project.managers;
 
 import java.util.List;
 
-import javax.enterprise.context.RequestScoped;
+import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
 import com.project.entities.Cliente;
 
-@RequestScoped
+@Stateless /* Since we are not using beans context, we must use EJB Context to propagate the EntityManager Factory!  */
 public class ClienteManager {
 
 	@Inject
@@ -37,4 +37,10 @@ public class ClienteManager {
 	public void remove(Cliente entity) {
 		em.remove(entity);
 	}
+	
+	public void removeById(long id) {
+		remove(get(id));
+	}
+	
+	/* Thats all folks! If you need to take a look at the xHTML source code, you can git clone the repository or pause the video. Thank you! */
 }
